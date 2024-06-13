@@ -1,10 +1,9 @@
+import React from "react";
+
 function App() 
 {
     return (
-        <>
-            <h1>Hello from the React Functional Component</h1>
-            <p>This is a functional component and I am using paragraph</p>
-        </>
+React.createElement("div",{className:"container"},React.createElement("h1",{},"My App"))
 );
 }
 
