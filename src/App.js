@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import FeedbackItem from "./components/FeedbackItem.jsx";
 
 function App() 
 {
@@ -6,7 +7,7 @@ function App()
       <>
           <Header text="Welcome to Feedback UI"/>
           <div className="container">
-            <h1>My App</h1>
+            <FeedbackItem/>
           </div>
       </>
 
