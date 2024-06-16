@@ -4,8 +4,20 @@ import Button from "./shared/Button";
 
 function FeedbackForm() {
  const [text, setText] = useState("");
+ const [buttonDisabled, setButtonDisabled] = useState(true);
+ const [message,setMessage] = useState("");
  
  const handleTextInput = (event) => {
+       if(text === "") {
+        setMessage(null);
+        setButtonDisabled(true);
+       } else if (text.trim().length < 10) {
+        setMessage("Text should have atleast 10 characters");
+        setButtonDisabled(true);
+       } else {
+        setMessage(null);
+        setButtonDisabled(false);
+       }
        setText(event.target.value);
  };
 
@@ -16,10 +28,10 @@ function FeedbackForm() {
         {/* @todo: Rating selector*/}
         <div className="input-group">
         <input onChange={handleTextInput}  type="text" placeholder="Write a review" value={text} />
-        <Button type="submit" version="secondary">Submit</Button>
+        <Button type="submit" version="secondary" isDisabled={buttonDisabled}>Submit</Button>
         </div>
         </form>
-        
+        {message && <div className="message">{message}</div>}
     </Card>
   )
 }
