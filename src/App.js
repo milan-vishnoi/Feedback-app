@@ -24,10 +24,10 @@ function App()
    }; 
     return (
       <>
-          <Header text="Welcome to Feedback App"/>
+          <Header text="Welcome to Feedback App"/> 
+          <div className="container">
           <FeedbackForm handleAdd={addFeedback}/>
           <FeedbackStats feedback={feedback}/>
-          <div className="container">
             <FeedbackList feedback={feedback} handleDelete = {deleteFeedback}/>
             <AboutPages/>
           </div>
