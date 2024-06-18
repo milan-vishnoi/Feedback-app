@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList.jsx";
 import FeedbackStats from "./components/FeedbackStats.jsx";
 import FeedbackForm from "./components/FeedbackForm.jsx";
+import AboutPages from "./pages/AboutPage.jsx";
 import FeedbackData from "./data/FeedbackData";
 
 function App() 
@@ -28,6 +29,7 @@ function App()
           <FeedbackStats feedback={feedback}/>
           <div className="container">
             <FeedbackList feedback={feedback} handleDelete = {deleteFeedback}/>
+            <AboutPages/>
           </div>
       </>
 );
