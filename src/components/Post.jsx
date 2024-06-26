@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, Route, Routes } from "react-router-dom";
 
 function Post() {
 
@@ -18,6 +18,9 @@ function Post() {
     <div>
         <h1>Post </h1>
         <button onClick={onClick}>Click Here to go back</button>
+        <Routes>
+          <Route path="/show" element ={<h1>Show the thing</h1>}/>
+        </Routes>
     </div>
   )
 }
