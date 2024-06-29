@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import RatingSelector from "./RatingSelector";
 import Card from "./shared/Card";
 import Button from "./shared/Button";
+import FeedbackContext from "../context/FeedbackContext";
 
-function FeedbackForm({handleAdd}) {
+function FeedbackForm() {
  const [text, setText] = useState("");
  const [rating, setRating] = useState(10);
  const [buttonDisabled, setButtonDisabled] = useState(true);
  const [message,setMessage] = useState("");
+
+ const {addFeedback} = useContext(FeedbackContext);
  
  const handleTextInput = (event) => {
        if(text === "") {
@@ -30,7 +33,7 @@ function FeedbackForm({handleAdd}) {
             rating: rating,
             text: text
         };
-      handleAdd(newFeedback);
+      addFeedback(newFeedback);
       setText("");
     }
  }
