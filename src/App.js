@@ -11,6 +11,7 @@ import AboutIconLink from "./components/AboutIconLink.jsx";
 import FeedbackData from "./data/FeedbackData";
 import Post from "./components/Post.jsx";
 import Card from "./components/shared/Card.jsx";
+import { FeedbackProvider } from "./context/FeedbackContext.js";
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -26,6 +27,7 @@ function App() {
     }
   };
   return (
+    <FeedbackProvider>
     <Router>
       <Header text="Welcome to Feedback App" />
       <div className="container">
@@ -51,6 +53,8 @@ function App() {
         </Card>
       </div>
     </Router>
+    </FeedbackProvider>
+
   );
 }
 
