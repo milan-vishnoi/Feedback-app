@@ -48,7 +48,7 @@ export const FeedbackProvider = ({ children }) => {
 
   return (
     <FeedbackContext.Provider
-      value={{ feedback, deleteFeedback, addFeedback, editFeedback }}
+      value={{ feedback, deleteFeedback, addFeedback, editFeedback, editedFeedback }}
     >
       {children}
     </FeedbackContext.Provider>
