@@ -11,15 +11,15 @@ export const FeedbackProvider = ({ children }) => {
       rating: 10,
     },
     {
-        id: 2,
-        text: "This is FeedbackItem 2",
-        rating: 9,
-      },
-      {
-        id: 3,
-        text: "This is FeedbackItem 3",
-        rating: 8
-      }
+      id: 2,
+      text: "This is FeedbackItem 2",
+      rating: 9,
+    },
+    {
+      id: 3,
+      text: "This is FeedbackItem 3",
+      rating: 8,
+    },
   ]);
 
   const addFeedback = (newFeedback) => {
@@ -33,8 +33,23 @@ export const FeedbackProvider = ({ children }) => {
     }
   };
 
+  const [editedFeedback, setEditedFeedback] = useState({
+    item: {},
+    edit: false,
+  });
+
+  const editFeedback = (item) => {
+    console.log("Edited:"+item.id+" "+item.text);
+    setEditedFeedback({
+      item,
+      edit: true,
+    });
+  };
+
   return (
-    <FeedbackContext.Provider value={{ feedback, deleteFeedback, addFeedback }}>
+    <FeedbackContext.Provider
+      value={{ feedback, deleteFeedback, addFeedback, editFeedback }}
+    >
       {children}
     </FeedbackContext.Provider>
   );
