@@ -1,0 +1,24 @@
+{
+  "feedback": [
+    {
+      "id": "1",
+      "rating": 7,
+      "text": "Item1-This was a decent app and easy to use"
+    },
+    {
+      "id": "2",
+      "rating": 8,
+      "text": "Item2-Super impressed with the app"
+    },
+    {
+      "id": "3",
+      "rating": 5,
+      "text": "Item3-Wasn't too impressed with the App. It is okayish"
+    },
+    {
+      "id": 4,
+      "rating": 8,
+      "text": "Item4-This was a decent app and easy to use"
+    }
+  ]
+}
